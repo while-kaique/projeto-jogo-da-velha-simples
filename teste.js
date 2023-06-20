@@ -1,7 +1,9 @@
-var letra = "<p>x</p>"
 var jogadas = 0
+
 var pazul = 0
 var pverm = 0
+
+var jogador = "True"
 
 const quad1 = document.getElementById("1")
 const quad2 = document.getElementById("2")
@@ -54,9 +56,12 @@ function verificar(quadradov) {
                 verificador = 0
                 jogadas = 0
                 for (const quad of listaquadrados) {
+                    quad.style.backgroundColor = "white";
+                    quad.style.textShadow = "0px";
+                    quad.style.border = "2px solid rgba(0, 0, 0, 0.76)";
                     quad.innerHTML = ""
                 }
-                letra = "<p>x</p>"
+                jogador = "True"
             } else {empate()}
         }
     }
@@ -65,17 +70,23 @@ function verificar(quadradov) {
 
 function adicionar(quadradoa) {
 
-    if (quadradoa.innerHTML == "") {
-        quadradoa.innerHTML = letra
-        if (letra == "<p>x</p>") {
-            letra = "<p>o</p>"
-            quadradoa.style.color = "rgb(59, 137, 255)"
-        } else {
-            letra = "<p>x</p>"
-            quadradoa.style.color = "rgb(255, 96, 96)"
-        }
+    if (quadradoa.innerHTML == "" && jogador == "True") {
+        quadradoa.style.backgroundColor = "rgb(226, 226, 226)";
+        quadradoa.style.textShadow = "0px 0px 3px black"
+        quadradoa.style.border = "2px solid rgba(0, 0, 0, 0.76)"
+        quadradoa.innerHTML = "<p>x</p>"
+        quadradoa.style.color = "rgb(59, 137, 255)"
         jogadas += 1
-
+        jogador = "False"
+        verificar(quadradoa.innerHTML)
+    } else if (quadradoa.innerHTML == "" && jogador == "False") {
+        quadradoa.style.backgroundColor = "rgb(226, 226, 226)";
+        quadradoa.style.textShadow = "0px 0px 3px black"
+        quadradoa.style.border = "2px solid rgba(0, 0, 0, 0.76)"
+        quadradoa.innerHTML = "<p>o</p>"
+        quadradoa.style.color = "rgb(255, 96, 96)"
+        jogadas += 1
+        jogador = "True"
         verificar(quadradoa.innerHTML)
     }
 
@@ -85,9 +96,12 @@ function empate() {
         verificador = 0
         jogadas = 0
         for (const quad of listaquadrados) {
+            quad.style.backgroundColor = "white";
+            quad.style.textShadow = "0px";
+            quad.style.border = "2px solid rgba(0, 0, 0, 0.76)";
             quad.innerHTML = ""
         }
-        letra = "<p>x</p>"
+        jogador = "True"
     }
 
 }
@@ -95,5 +109,36 @@ function empate() {
 
 
 function marcar(quadradom) {
+    jogador = "True"
     adicionar(quadradom)
+    if (jogador == "False") {
+        var marcou = 0
+        for (let possibilidade of vitorias) {
+            var verificador = 0
+            for (const quadrado of possibilidade) {
+                if (quadradom.innerHTML == quadrado.innerHTML) {
+                    verificador += 1
+                }
+                if (verificador == 2) {
+                    for (const quadrado of possibilidade) {
+                        if (quadrado.innerText == "") { 
+                            setTimeout(adicionar, 500, quadrado)
+                            marcou += 1
+                            break
+                        }
+                    }
+                    break
+                }
+                if (marcou == 1) {
+                    break
+                }
+            }
+        }
+        if (marcou == 0) {
+            var aleatorio = (Math.floor(Math.random() * 9) + 1)
+            if (quad[aleatorio].innerText == ""){
+                setTimeout(adicionar, 500, quad[aleatorio])
+            }
+        }
+    }
 }

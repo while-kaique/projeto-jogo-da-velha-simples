@@ -126,7 +126,7 @@ div#tab {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(50vh - 150px);
+    margin-bottom: calc(50vh - 150px - 95px);
     margin-top: calc(50vh - 150px - 95px);
 }
 
@@ -147,6 +147,10 @@ td {
 .quadrado {
     width: 85px;
     height: 85px;
+}
+
+td:hover {
+    background-color: rgb(226, 226, 226);
 }
 
 .cont {
