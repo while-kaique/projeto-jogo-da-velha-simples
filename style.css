@@ -1,0 +1,154 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(217deg, rgba(9, 66, 255, 0.8), rgba(48, 145, 255, 0.349) 70.71%),            linear-gradient(127deg, rgba(73, 32, 255, 0.8), rgba(255, 98, 25, 0.863) 70.71%),            
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.712);
+    padding: 30px 30px;
+    color: rgb(255, 255, 255);
+    z-index: 30px;
+}
+a{
+    color: white;
+}
+
+.nav:hover{
+    text-decoration: underline;
+}
+.nav:hover{
+    padding: 0px;
+    margin: 0px;
+    color: rgb(59, 137, 255);
+    transition: .3s;
+}
+
+.nav:not(:hover){
+    transition: .3s;
+}
+
+.razul {
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: white;
+    background-color: rgb(59, 137, 255);
+    text-align: center;
+    width: 80vw;
+}
+.rvermelho {
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: white;
+    background-color: rgb(255, 96, 96);
+    text-align: center;
+    width: 80vw;
+}
+#tabela {  
+    margin-bottom: 60vh;
+    margin-top: 10vh;
+}
+#tabela #titulo{
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: white;
+    background-color: rgb(36, 36, 36);
+    text-align: center;
+    width: 80vw;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border: 2px solid white;
+    border-bottom: 1px solid white;
+}
+#tabela div{
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+#tabela p{
+    padding: 10px;
+}
+
+div p#contA {
+    margin-right: 30px;
+    font-size: 5rem;
+    color: rgb(59, 137, 255);
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+div p#contV {
+    margin-right: 30px ;
+    font-size: 5rem;
+    color: rgb(255, 96, 96);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-right: 2px solid rgba(253, 109, 109, 0.658);
+    border-left: 2px solid rgba(253, 109, 109, 0.658);
+    border-radius: 4px;
+}
+
+nav p {
+    padding: 10px 0px;
+    color: white;
+    font-size: 1.7rem;
+}
+
+header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+div#tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc(50vh - 150px);
+    margin-top: calc(50vh - 150px - 95px);
+}
+
+table {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+td {
+    border: 2px solid rgba(0, 0, 0, 0.76);
+    text-align: center;
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+.quadrado {
+    width: 85px;
+    height: 85px;
+}
+
+.cont {
+    cursor: default;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jogo da velha simples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <p><a class="nav" href="index.html">Home</a></p>
+                <p><a class="nav" href="historico.html">Histórico</a></p>
+            </nav>
+            <h1>Jogo da Velha simplificado</h1>
+            <p class="cont" id="contA">0</p>
+            <p class="cont" id="contV">0</p>
+        </div>
+    </header>
+    <div id="tab">
+        <table>
+            <tr>
+                <td class="quadrado" id="1" onclick="marcar(this)"></td>
+                <td class="quadrado" id="2" onclick="marcar(this)"></td>
+                <td class="quadrado" id="3" onclick="marcar(this)"></td>
+            </tr>
+            <tr>
+                <td class="quadrado" id="4" onclick="marcar(this)"></td>
+                <td class="quadrado" id="5" onclick="marcar(this)"></td>
+                <td class="quadrado" id="6" onclick="marcar(this)"></td>
+            </tr>
+            <tr>
+                <td class="quadrado" id="7" onclick="marcar(this)"></td>
+                <td class="quadrado" id="8" onclick="marcar(this)"></td>
+                <td class="quadrado" id="9" onclick="marcar(this)"></td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+<script src="teste.js"></script>
+</html>
